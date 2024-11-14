@@ -2,6 +2,7 @@
 
 import { BACKEND_POINT } from "@/constant";
 import { useEffect } from "react";
+import Header from "./components/Header";
 
 export default function Home() {
   const fetchData = async () => {
@@ -19,7 +20,8 @@ export default function Home() {
 
   return (
     <div>
-      <h1>hello</h1>
+      <Header />
+
     </div>
   );
 }
