@@ -2,6 +2,7 @@
 
 import { BACKEND_POINT } from "@/constant";
 import { useEffect } from "react";
+import Header from "./components/Header";
 
 export default function Home() {
   const fetchData = async () => {
@@ -16,6 +17,9 @@ export default function Home() {
   useEffect(() => {
     fetchData();
   }, []);
-
-  return <div className="w-screen h-screen m-auto">HELLO WORLD OF BOTOX</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
