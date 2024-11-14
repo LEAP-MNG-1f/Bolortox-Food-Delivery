@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export default function Home() {
   const fetchData = async () => {
     try {
-      const response = await fetch(`${BACKEND_POINT}`);
+      const response = await fetch("http://localhost:8000/");
       const data = await response.json();
       console.log(data);
     } catch (error) {
@@ -17,5 +17,9 @@ export default function Home() {
     fetchData();
   }, []);
 
-  return <div className="w-screen h-screen m-auto">HELLO WORLD OF BOTOX</div>;
+  return (
+    <div>
+      <h1>hello</h1>
+    </div>
+  );
 }
