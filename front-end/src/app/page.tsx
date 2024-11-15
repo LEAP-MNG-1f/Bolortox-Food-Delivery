@@ -2,7 +2,9 @@
 
 import { BACKEND_POINT } from "@/constant";
 import { useEffect } from "react";
-import Header from "./components/Header";
+import Header from "./_components/Header";
+
+import { Cards } from "./_components/Card";
 
 export default function Home() {
   const fetchData = async () => {
@@ -18,10 +20,16 @@ export default function Home() {
     fetchData();
   }, []);
 
+  // const price: number = 1000;
+  // let str: string = "Hello";
+  // let bool: boolean = true;
+
   return (
     <div>
       <Header />
-
+      {/*       
+      <Cards img="Zurag" title="Burger" price={5005} discount={20} />
+      <Cards img="Zurag" title="Burger2" price={5000} /> */}
     </div>
   );
 }
