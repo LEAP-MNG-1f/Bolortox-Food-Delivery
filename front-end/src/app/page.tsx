@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import Header from "./_components/Header";
 
 import { Cards } from "./_components/Card";
+import { HomePageBody } from "./_components/HomePageBody";
+import { HomePageInfo } from "./_components/HomePageInfo";
 
 export default function Home() {
   const fetchData = async () => {
@@ -27,9 +29,8 @@ export default function Home() {
   return (
     <div>
       <Header />
-      {/*       
-      <Cards img="Zurag" title="Burger" price={5005} discount={20} />
-      <Cards img="Zurag" title="Burger2" price={5000} /> */}
+      <HomePageBody />
+      <HomePageInfo />
     </div>
   );
 }
