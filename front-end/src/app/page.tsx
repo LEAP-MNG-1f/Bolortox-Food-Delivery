@@ -7,6 +7,7 @@ import Header from "./_components/Header";
 import { Cards } from "./_components/Card";
 import { HomePageBody } from "./_components/HomePageBody";
 import { HomePageInfo } from "./_components/HomePageInfo";
+import { Footer } from "./_components/Footer";
 
 export default function Home() {
   const fetchData = async () => {
@@ -31,6 +32,7 @@ export default function Home() {
       <Header />
       <HomePageBody />
       <HomePageInfo />
+      <Footer/>
     </div>
   );
 }
