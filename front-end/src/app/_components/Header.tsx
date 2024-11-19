@@ -8,6 +8,7 @@ import { Pinecone } from "./svg/Pinecone";
 import { Bucket } from "./svg/Bucket";
 import { Human } from "./svg/Human";
 import { AppBar } from "@mui/material";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -18,8 +19,12 @@ export default function Header() {
             <Pinecone />
           </IconButton>
           <Box className="flex gap-5 ">
-            <Typography>НҮҮР</Typography>
-            <Typography>ХООЛНЫ ЦЭС</Typography>
+            <Link href="/">
+              <Typography>НҮҮР</Typography>
+            </Link>
+            <Link href="/menu">
+              <Typography>ХООЛНЫ ЦЭС</Typography>
+            </Link>
             <Typography>ХҮРГЭЛТИЙН БҮС</Typography>
           </Box>
         </div>
