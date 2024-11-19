@@ -2,10 +2,12 @@ import * as React from "react";
 import Stack from "@mui/material/Stack";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
-import { BookIcon } from "./svg/BookIcon";
+
 import { Typography } from "@mui/material";
-import { ClockIcon } from "./svg/ClockIcon";
-import { SaladIcon } from "./svg/SaladIcon";
+import { BookIcon } from "../svg/BookIcon";
+import { ClockIcon } from "../svg/ClockIcon";
+import { SaladIcon } from "../svg/SaladIcon";
+
 
 export const HomePageInfo = () => {
   const DemoPaper = styled(Paper)(({ theme }) => ({

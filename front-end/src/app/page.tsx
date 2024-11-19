@@ -30,10 +30,8 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
-      <HomePageBody />
-      <HomePageInfo />
-      <Footer />
+     hi
+     
     </div>
   );
 }

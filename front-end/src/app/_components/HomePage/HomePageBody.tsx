@@ -1,4 +1,4 @@
-import { Line } from "./svg/Line";
+import { Line } from "../svg/Line";
 
 export const HomePageBody = () => {
   return (
