@@ -1,14 +1,5 @@
 "use client";
-
-import { BACKEND_POINT } from "@/constant";
 import { useEffect } from "react";
-import Header from "./_components/Header";
-
-import { Cards } from "./_components/Card";
-
-import { Footer } from "./_components/Footer";
-import { HomePageBody } from "./_components/HomePage/HomePageBody";
-import { HomePageInfo } from "./_components/HomePage/HomePageInfo";
 
 export default function Home() {
   const fetchData = async () => {
@@ -24,14 +15,5 @@ export default function Home() {
     fetchData();
   }, []);
 
-  // const price: number = 1000;
-  // let str: string = "Hello";
-  // let bool: boolean = true;
-
-  return (
-    <div>
-     hi
-     
-    </div>
-  );
+  return <div>hi</div>;
 }
