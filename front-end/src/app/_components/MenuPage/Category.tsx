@@ -14,7 +14,7 @@ export const Category = () => {
           }}
           variant="outlined"
         >
-          Outlined
+          Breakfast
         </Button>
         <Button
           sx={{
@@ -26,7 +26,7 @@ export const Category = () => {
           }}
           variant="outlined"
         >
-          Outlined
+          Soup
         </Button>
         <Button
           sx={{
@@ -38,7 +38,7 @@ export const Category = () => {
           }}
           variant="outlined"
         >
-          Outlined
+          Main Course
         </Button>
         <Button
           sx={{
@@ -50,7 +50,7 @@ export const Category = () => {
           }}
           variant="outlined"
         >
-          Outlined
+          Dessert
         </Button>
       </div>
     </div>
