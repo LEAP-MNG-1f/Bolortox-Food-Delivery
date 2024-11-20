@@ -28,7 +28,7 @@ server.post("/assets", async (request, response) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`server is worl=king http://localhost:${PORT}`);
+  console.log(`server is working http://localhost:${PORT}`);
 });
 
 console.log("Password", process.env.PASSWORD);
