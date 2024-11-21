@@ -1,16 +1,16 @@
 import { Footer } from "../Footer";
 import Header from "../Header";
-import { Carousel, CarouselListProps } from "../MenuPage/Carousel";
+import { MainCourse } from "../MenuPage/MainCourse";
 
 import { Category } from "../MenuPage/Category";
 
-export default function MenuPage({ foods }: CarouselListProps) {
-  console.log(foods);
+export default function MenuPage() {
+
   return (
     <div>
       <Header />
       <Category />
-      <Carousel foods={foods} />
+      <MainCourse  />
       <Footer />
     </div>
   );

@@ -6,7 +6,7 @@ import connectDb from "./connectDB.js";
 
 const server = express();
 server.use(cors());
-const PORT = 8000;
+const PORT = 8001;
 
 server.post("/assets", async (request, response) => {
   try {
@@ -16,7 +16,7 @@ server.post("/assets", async (request, response) => {
       api_secret: process.env.CLOUDINARY_SECRET,
     });
     const uploadResult = await cloudinary.uploader.upload(
-      "./assets/Breakfast.png"
+      "./assets/SmoothieBowl.png"
     );
     console.log(uploadResult);
   } catch (error) {
