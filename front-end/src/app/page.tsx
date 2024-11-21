@@ -7,7 +7,7 @@ export default function Home() {
     {
       _id: "1",
       name: "Egg Toast",
-      image: "front-end/public/EggToast.png",
+      image: "",
       ingredient: "egg , bread , mayo",
       price: 15800,
     },
