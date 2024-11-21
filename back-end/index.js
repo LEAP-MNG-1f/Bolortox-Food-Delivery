@@ -2,14 +2,11 @@ import express from "express";
 import cors from "cors";
 import { v2 as cloudinary } from "cloudinary";
 import "dotenv/config";
+import connectDb from "./connectDB.js";
 
 const server = express();
 server.use(cors());
 const PORT = 8000;
-
-server.get("/", (request, response) => {
-  response.send("Hello world");
-});
 
 server.post("/assets", async (request, response) => {
   try {
@@ -25,6 +22,19 @@ server.post("/assets", async (request, response) => {
   } catch (error) {
     console.log("cloudinary error", error);
   }
+});
+
+server.get("/", async (req, response) => {
+  const db = await connectDb();
+
+  let collection = db.collection("movies");
+  let results = await collection.find().limit(10).toArray();
+
+  console.log(results);
+  response.json({
+    success: true,
+    data: results,
+  });
 });
 
 server.listen(PORT, () => {
