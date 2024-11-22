@@ -21,6 +21,20 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   },
 }));
 
+export type FoodType = {
+  _id: string;
+  name: string;
+  image: string;
+  ingredient: string;
+  price: number;
+};
+
+type CardListProps = {
+  foods: FoodType[];
+  arrayNumber: number[];
+  arrayStr: string[];
+};
+
 export const MainCourse = () => {
   const [open, setOpen] = React.useState(false);
 
@@ -36,7 +50,7 @@ export const MainCourse = () => {
       <Button variant="outlined" onClick={handleClickOpen}>
         <div className=" w-[282px] h-[256px] flex flex-col items-start">
           <img src="/EggToast.png" alt="" />
-          <p className='font-bold text-black'>Breakfast</p>
+          <p className="font-bold text-black">Breakfast</p>
           <p className="font-bold text-green-500">15$</p>
         </div>
       </Button>
@@ -66,7 +80,11 @@ export const MainCourse = () => {
         </IconButton>
         <DialogContent>
           <div className="flex gap-[33px] items-center">
-            <img className="w-[500px] h-[500px]" src="/OatBowl.png" alt="" />
+            <img
+              className="w-[500px] h-[500px] bg-cover "
+              src="/FoodImage.png"
+              alt=""
+            />
 
             <div className="flex flex-col gap-8">
               <div>
