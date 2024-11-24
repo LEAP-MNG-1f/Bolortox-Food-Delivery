@@ -6,84 +6,98 @@ export default function MenuPage() {
   const foodsMockData : FoodType[] = [
     {
       _id: "1",
-      name: "Cheeseburger",
-      image: "https://example.com/images/cheeseburger.jpg",
-      price: 8.99,
+      name: "Pizza",
+      image: 'http://res.cloudinary.com/dkm8vqcln/image/upload/v1732474813/gkt8okbs4idtwakascq6.png',
+      price: 28000,
       ingredient: 
-      " Beef patty, Cheese, Lettuce, Tomato, Pickles, Onions, Ketchup, Mustard"
+      " Grounded beef, Cheese, Lettuce, Tomato, Pepperoni, Onions, Tomato sauce, Mustard sauce"
       ,
     },
     {
       _id: "2",
-      name: "Margherita Pizza",
-      image: "https://example.com/images/margherita-pizza.jpg",
-      price: 12.49,
+      name: "Food Tart",
+      image: "http://res.cloudinary.com/dkm8vqcln/image/upload/v1732475565/ltedn0pm08rzgjp31ubf.png",
+      price: 49000,
       ingredient: 
-      "Tomato sauce, Mozzarella cheese, Fresh basil, Olive oil"
+      "Flour , sugar , butter , pastry cream , fruit"
 
       ,
     },
     {
       _id: "3",
-      name: "Spaghetti Bolognese",
-      image: "https://example.com/images/spaghetti-bolognese.jpg",
-      price: 15.99,
+      name: "Smoothie Bowl",
+      image: 'http://res.cloudinary.com/dkm8vqcln/image/upload/v1732475763/njmmqprkgiyln6h0p5oe.png',
+      price: 25000,
       ingredient: 
-      "Spaghetti, Ground beef, Tomato sauce, Onion, Garlic, Parmesan cheese"
+      "Banana , grape fruit , greek yogurt , dragon fruit , strawberry , blueberry , mint , peanutbutter"
     },
     {
       _id: "4",
-      name: "Caesar Salad",
-      image: "https://example.com/images/caesar-salad.jpg",
-      price: 7.49,
+      name: "Green Soup",
+      image: 'http://res.cloudinary.com/dkm8vqcln/image/upload/v1732475918/iwpe4wwmbvcpeijzyu7x.png',
+      price: 35000,
       ingredient: 
-       "Romaine lettuce, Caesar dressing, Croutons, Parmesan cheese, Chicken breast (optional)"
+       "Broccoli, Spinach , Celery , Whipping cream , heavy cream , vegetable stockings , Parsley ,Seeds "
     },
     {
       _id: "5",
-      name: "Chicken Tacos",
-      image: "https://example.com/images/chicken-tacos.jpg",
+      name: "Fried Chicken",
+      image:  'http://res.cloudinary.com/dkm8vqcln/image/upload/v1732476243/rczpxqr2azudmu2lsg0f.png',
       price: 9.99,
       ingredient: 
-  "Grilled chicken, Taco shell, Lettuce, Tomato, Cheese, Sour cream, Salsa"
+  "Grilled chicken, Soy sauce, Sweet chilli sauce, Tomato, Cheese, Sour cream"
     },
     {
       _id: "6",
-      name: "Vegetable Stir-fry",
-      image: "https://example.com/images/vegetable-stir-fry.jpg",
-      price: 10.49,
+      name: "Sandwich",
+      image: 'http://res.cloudinary.com/dkm8vqcln/image/upload/v1732476339/g2xgubyh5latv0su0tp7.png',
+      price: 15000,
       ingredient: 
-       
-      "Broccoli, Carrots, Bell peppers, Onions, Soy sauce, Garlic, Tofu (optional), Rice"
+      "Lettuce, Eggs, Cheese, Onions, Mayo, Chicken, Tomato(optional), Bacon"
     },
     {
       _id: "7",
-      name: "Grilled Salmon",
-      image: "https://example.com/images/grilled-salmon.jpg",
-      price: 18.99,
+      name: "Lunch",
+      image: 'http://res.cloudinary.com/dkm8vqcln/image/upload/v1732476512/pk94sthafx0hsba3geq3.png',
+      price: 65000,
       ingredient:"Salmon fillet, Lemon, Garlic, Olive oil, Herbs (dill, parsley), Salt, Pepper"
     },
     {
       _id: "8",
-      name: "Buffalo Wings",
-      image: "https://example.com/images/buffalo-wings.jpg",
-      price: 11.99,
-      ingredient: "Chicken wings, Buffalo sauce, Blue cheese dressing, Celery, Carrots"
+      name: "Apple Pie",
+      image: 'http://res.cloudinary.com/dkm8vqcln/image/upload/v1732476589/ljfwfnb3rgqhn4v9hxfg.png',
+      price: 24500,
+      ingredient: "Flour , Butter , Sugar , Apple sauce "
     },
     {
       _id: "9",
-      name: "Pasta Carbonara",
-      image: "https://example.com/images/pasta-carbonara.jpg",
-      price: 14.49,
-      ingredient:"Spaghetti, Eggs, Pancetta, Parmesan cheese, Black pepper, Garlic"
+      name: "Fruit Cake",
+      image: 'http://res.cloudinary.com/dkm8vqcln/image/upload/v1732476988/fwt0yemsgwcceigjquhz.png',
+      price: 89900,
+      ingredient:"Flour , Sugar , Baking powder , Eggs , Salt , Heavy cream , Whipping cream , butter , Vanilla extract , Milk"
     },
     {
       _id: "10",
-      name: "Chocolate Cake",
-      image: "https://example.com/images/chocolate-cake.jpg",
+      name: "Oreo Shake",
+      image: 'http://res.cloudinary.com/dkm8vqcln/image/upload/v1732477151/nuthws85m7emfmybquzx.png',
       price: 5.99,
-      ingredient:"Flour, Cocoa powder, Sugar, Eggs, Butter, Vanilla extract, Baking soda, Milk"
+      ingredient:"Oreo , Vanilla sugar, Milk , Ice , Chocolate syrup , Chocolate Vanilla ice cream"
     },
+    {
+    _id: "11",
+    name: "Chocolate Fudge" ,
+    image: 'http://res.cloudinary.com/dkm8vqcln/image/upload/v1732477472/pnssgyqta3gl0vfeanqt.png',
+    price: 15600,
+    ingredient:"Chocolate , Milk , Cacao powder , Chocolate syrup"
+    },
+    {
+      _id: "12" ,
+      name: "Yoghurt Oat",
+      image: 'http://res.cloudinary.com/dkm8vqcln/image/upload/v1732477540/m3k0mfbz1xozkoacbhp8.png',
+      price: 9900,
+      ingredient:"Fruit yoghurt , Oatmeal , fruit"
+    }
+
   ];
 
   return (

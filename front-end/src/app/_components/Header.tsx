@@ -15,7 +15,10 @@ export default function Header() {
       <div className="flex justify-between items-center h-[57px] w-[1200px]">
         <div className=" items-center flex gap-10  text-black">
           <IconButton>
-            <Pinecone />
+            <Link href="./home-page">
+              
+              <Pinecone />
+            </Link>
           </IconButton>
           <Box className="flex gap-5 ">
             <Link href="/home-page">
