@@ -35,7 +35,7 @@ export const FoodsCart = ({
   };
 
   return (
-    <React.Fragment> 
+    <React.Fragment>
       <Button onClick={handleClickOpen}>
         <div className="w-[282px] h-[256px] flex flex-col items-start border-2 border-slate-800 ">
           <img src={image} alt="" />
@@ -48,31 +48,42 @@ export const FoodsCart = ({
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
-        
-
+        sx={{
+          "& .MuiDialog-paper": {
+            borderRadius: "16px",
+            maxWidth: 981,
+          },
+        }}
       >
-        <div className="  h-[564px] w-[981px]" > 
-       
-          <IconButton
-          aria-label="close"
-          onClick={handleClose}
-          sx={(theme) => ({
-            position: "absolute",
-            right: 8,
-            top: 8,
-            color: theme.palette.grey[500],
-          })}
-        >
-          <CloseIcon />
-        </IconButton>
+        <div className="  h-[564px] !w-[981px] p-[33px] flex gap-[33px]">
+          <div className="w-[500px] h-[500px]">
+            <img src={image} alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="flex flex-col gap-8 justify-center">
+            <div className="flex flex-col ">
+              <p className="font-bold text-3xl">{name}</p>
+              <p className="font-bold text-[#18BA51] text-lg">{price}₮</p>
+            </div>
 
-        <DialogActions>
-          <Button autoFocus onClick={handleClose}>
-            Save changes
-          </Button>
-        </DialogActions>
+            <IconButton
+              aria-label="close"
+              onClick={handleClose}
+              sx={(theme) => ({
+                position: "absolute",
+                right: 8,
+                top: 8,
+                color: theme.palette.grey[500],
+              })}
+            >
+              <CloseIcon />
+            </IconButton>
+            <DialogActions>
+              <Button autoFocus onClick={handleClose}>
+                Save changes
+              </Button>
+            </DialogActions>
+          </div>
         </div>
-        
       </BootstrapDialog>
     </React.Fragment>
   );
