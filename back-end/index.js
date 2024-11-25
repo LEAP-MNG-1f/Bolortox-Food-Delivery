@@ -2,28 +2,72 @@ import express from "express";
 import cors from "cors";
 import { v2 as cloudinary } from "cloudinary";
 import "dotenv/config";
-import connectDb from "./connectDB.js";
+
 import { ObjectId } from "mongodb";
+import mongoose from "mongoose";
+import animeModel from "./model/anime.js";
+import userRouter from "./routes/userRouter.js";
+import { createUser } from "./controllers/userController.js";
+
+mongoose.connect(
+  "mongodb+srv://ace12d192:wap3TZLOZeJlgLIq@cluster0.s6jvj.mongodb.net/food-delivery"
+);
 
 const server = express();
 server.use(cors());
 const PORT = 8001;
+server.use("/api", userRouter);
 
-server.post("/assets", async (request, response) => {
-  try {
-    cloudinary.config({
-      cloud_name: process.env.CLOUDINARY_NAME,
-      api_key: process.env.CLOUDINARY_KEY,
-      api_secret: process.env.CLOUDINARY_SECRET,
-    });
-    const uploadResult = await cloudinary.uploader.upload(
-      "./assets/YoghurtOat.png"
-    );
-    console.log(uploadResult);
-  } catch (error) {
-    console.log("cloudinary error", error);
-  }
-});
+// server.get("/get", async (req, res) => {
+//   const result = await animeModel.find({
+//     name: "Naruto",
+//     year: 1998,
+//   });
+
+//   res.json({
+//     success: true,
+//     data: result,
+//   });
+// });
+
+// server.post("/create", async (req, res) => {
+//   const result = await animeModel.create({
+//     name: "Naruto",
+//     year: 1998,
+//   });
+
+//   res.json({
+//     success: true,
+//     data: result,
+//   });
+// });
+
+// server.delete("/delete", async (req, res) => {
+//   const result = await animeModel.deleteOne({
+//     _id: "6743f29ef2a4f83dcba5902e",
+//   });
+
+//   res.json({
+//     success: true,
+//     data: result,
+//   });
+// });
+
+// server.post("/assets", async (request, response) => {
+//   try {
+//     cloudinary.config({
+//       cloud_name: process.env.CLOUDINARY_NAME,
+//       api_key: process.env.CLOUDINARY_KEY,
+//       api_secret: process.env.CLOUDINARY_SECRET,
+//     });
+//     const uploadResult = await cloudinary.uploader.upload(
+//       "./assets/YoghurtOat.png"
+//     );
+//     console.log(uploadResult);
+//   } catch (error) {
+//     console.log("cloudinary error", error);
+//   }
+// });
 
 // server.get("/", async (req, response) => {
 //   const db = await connectDb();
@@ -41,7 +85,7 @@ server.post("/assets", async (request, response) => {
 // server.post("/create-user", async (req, response) => {
 //   const db = await connectDb();
 
-//   const collection = db.collection("product");
+//   const collection = db.collection("product");+
 //   const result = await collection.insertOne({
 //     name: "Porsche",
 //     email: "Bolortox",
