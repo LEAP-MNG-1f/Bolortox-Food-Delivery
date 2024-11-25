@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
@@ -9,6 +10,8 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
 import { FoodType } from "./MainCourse";
+import { Minus } from "../svg/Minus";
+import { Plus } from "../svg/Plus";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -18,6 +21,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     padding: theme.spacing(1),
   },
 }));
+
 export const FoodsCart = ({
   image,
   price,
@@ -26,6 +30,10 @@ export const FoodsCart = ({
   _id,
 }: FoodType) => {
   const [open, setOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    setOpen(false);
+  }, []);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -37,9 +45,8 @@ export const FoodsCart = ({
   return (
     <React.Fragment>
       <Button onClick={handleClickOpen}>
-        <div className="w-[282px] h-[256px] flex flex-col items-start border-2 border-slate-800 ">
+        <div className="w-[282px] h-[256px] flex flex-col items-start  ">
           <img src={image} alt="" />
-
           <p className="font-bold text-black">{name}</p>
           <p className="font-bold text-[#18BA51]">{price}₮</p>
         </div>
@@ -55,7 +62,7 @@ export const FoodsCart = ({
           },
         }}
       >
-        <div className="  h-[564px] !w-[981px] p-[33px] flex gap-[33px]">
+        <div className="h-[564px] !w-[981px] p-[33px] flex gap-[33px]">
           <div className="w-[500px] h-[500px]">
             <img src={image} alt="" className="w-full h-full object-cover" />
           </div>
@@ -63,6 +70,22 @@ export const FoodsCart = ({
             <div className="flex flex-col ">
               <p className="font-bold text-3xl">{name}</p>
               <p className="font-bold text-[#18BA51] text-lg">{price}₮</p>
+            </div>
+            <div className="flex flex-col gap-3">
+              <p className="font-bold text-lg">Орц</p>
+              <div className="w-[352px] h-[54px] flex justify-center items-center p-2 bg-[#F6F6F6] text-[#767676]">
+                Хулуу, төмс, лууван , сонгино, цөцгийн тос, самрын үр
+              </div>
+            </div>
+            <p className="font-bold text-lg">Тоо</p>
+            <div className="flex justify-between">
+              <div className="w-[40px] h-[40px] rounded-[10px] bg-[#18BA51] flex items-center justify-center">
+                <Minus />
+              </div>
+              <p className="flex items-center">1</p>
+              <div className="w-[40px] h-[40px] rounded-[10px] bg-[#18BA51] flex items-center justify-center">
+                <Plus />
+              </div>
             </div>
 
             <IconButton
@@ -77,9 +100,14 @@ export const FoodsCart = ({
             >
               <CloseIcon />
             </IconButton>
+
             <DialogActions>
-              <Button autoFocus onClick={handleClose}>
-                Save changes
+              <Button
+                className="!w-[384px] !h-[48px] !bg-[#18BA51] !text-white"
+                autoFocus
+                onClick={handleClose}
+              >
+                Сагслах
               </Button>
             </DialogActions>
           </div>

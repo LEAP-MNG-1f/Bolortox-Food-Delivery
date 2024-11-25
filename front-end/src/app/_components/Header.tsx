@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 
 import Box from "@mui/material/Box";
@@ -16,7 +17,6 @@ export default function Header() {
         <div className=" items-center flex gap-10  text-black">
           <IconButton>
             <Link href="./home-page">
-              
               <Pinecone />
             </Link>
           </IconButton>
@@ -38,7 +38,7 @@ export default function Header() {
                   <Bucket />
                 </Badge>
               </IconButton>
-              <Typography>САГС</Typography>
+              <Typography className="!text-black">САГС</Typography>
             </div>
 
             <div className="flex items-center  text-black">
