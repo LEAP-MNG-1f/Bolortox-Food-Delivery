@@ -5,22 +5,13 @@ const processEnum = {
 };
 
 const orderSchema = new mongoose.Schema({
-  userId: {
+  userIds: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
-  orderNumber: {
-    type: Number,
-    required: true,
-  },
-  foods: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Food",
-    },
-  ],
+
   totalPrice: {
-    type: String,
+    type: Number,
     required: true,
   },
   process: {
@@ -37,14 +28,18 @@ const orderSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  Khoroo: {
+  khoroo: {
     type: String,
     required: true,
   },
-  Apartment: {
+  apartment: {
     type: String,
+    required: true,
+  },
+  createdDate: {
+    type: Date,
     required: true,
   },
 });
 
-export const Order = new mongoose.model("Order", orderSchema);
+export const Order = mongoose.model("Order", orderSchema);

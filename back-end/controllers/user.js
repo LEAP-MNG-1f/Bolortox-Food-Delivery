@@ -14,11 +14,11 @@ const createUser = async (request, response) => {
   });
 };
 
-const getAllUsers = (request, response) => {
-  const result = User.find();
+const getAllUser = async (request, response) => {
+  const result = await User.find();
   response.json({
     success: true,
     data: result,
   });
 };
-export { getAllUsers, createUser };
+export { getAllUser, createUser };
