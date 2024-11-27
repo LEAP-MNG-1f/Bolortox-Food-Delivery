@@ -10,7 +10,7 @@ import userRouter from "./routes/userRouter.js";
 import { createUser } from "./controllers/userController.js";
 
 mongoose.connect(
-  "mongodb+srv://ace12d192:wap3TZLOZeJlgLIq@cluster0.s6jvj.mongodb.net/food-delivery"
+  "mongodb+srv://bolortogosboujee:YKQJCyO8XUM1rnmN@bolortox.i93uz.mongodb.net/food-delivery"
 );
 
 const server = express();
