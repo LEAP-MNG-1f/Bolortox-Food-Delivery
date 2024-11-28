@@ -5,13 +5,17 @@ const processEnum = {
 };
 
 const orderSchema = new mongoose.Schema({
-  userIds: {
+  user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
+    required: true,
   },
-
-  totalPrice: {
+  orderNumber: {
     type: Number,
+    required: true,
+  },
+  totalPrice: {
+    type: String,
     required: true,
   },
   process: {
