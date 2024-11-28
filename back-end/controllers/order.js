@@ -10,7 +10,7 @@ const createOrder = async (request, response) => {
     apartment: "22",
     createdDate: new Date(),
     process: "Active",
-    userIds: "674690d057356e8b4cf700d9",
+    userId: "674690d057356e8b4cf700d9",
   });
 
   response.json({
@@ -19,7 +19,7 @@ const createOrder = async (request, response) => {
   });
 };
 const getAllOrder = async (request, response) => {
-  const result = await Order.find().populate("userIds");
+  const result = await Order.find().populate("User");
 
   response.json({
     success: true,

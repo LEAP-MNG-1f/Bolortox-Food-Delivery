@@ -1,12 +1,9 @@
 import express from "express";
 import cors from "cors";
-import { v2 as cloudinary } from "cloudinary";
 import "dotenv/config";
-
-import { ObjectId } from "mongodb";
 import mongoose from "mongoose";
-import userRouter from "./routes/userRouter.js";
-import orderRouter from "./routes/userRouter.js";
+import { userRouter } from "./routes/userRouter.js";
+import { orderRouter } from "./routes/orderRouter.js";
 
 mongoose.connect(
   "mongodb+srv://bolortogosboujee:YKQJCyO8XUM1rnmN@bolortox.i93uz.mongodb.net/food-delivery"
