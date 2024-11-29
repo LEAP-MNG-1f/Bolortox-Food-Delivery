@@ -12,14 +12,7 @@ import Link from "next/link";
 import RightSideDrawer from "./MenuPage/RightSideDrawer";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import { ArrowLeft } from "./svg/arrowLeft";
 
 export default function Header() {
   const [open, setOpen] = React.useState(false);
@@ -42,32 +35,42 @@ export default function Header() {
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
+      className="!w-[586px] !flex !flex-col !items-center !justify-center"
     >
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+      <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-center w-[538px]">
+          <div className="flex w-[538px] h-[48px] items-center pt-7 justify-between pb-[48px]">
+            <ArrowLeft />
+            <button className="font-bold text-xl">Таны сагс</button>
+            <div> </div>
+          </div>
+          <div className=" w-[538px] h-[230px] border-y-2 border-y-[#D6D8DB] flex justify-center items-center">
+            <div className="flex justify-center gap-4">
+              <div>
+                <img
+                  className="w-[245px] h-[145px]"
+                  src="/OatBowl.png"
+                  alt=""
+                />
+              </div>
+              <div className="h-[150px] w-[245px]">
+                <p className="font-bold text-lg">Main Pizza</p>
+                <p className="font-bold text-lg text-[#18BA51]">34,800₮</p>
+                <p className="text-[#767676]">egg, chocolate, flour, sugar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-[586px] h-[172px] px-[32px] flex justify-between items-center border-t-2 border">
+          <div>
+            <p className="text-[#5E6166]">Нийт төлөх дүн</p>
+            <p className="font-bold text-lg">38,400₮</p>
+          </div>
+          <button className="w-[256px] h-[48px] bg-[#18BA51] text-white rounded-md">
+            Захиалах
+          </button>
+        </div>
+      </div>
     </Box>
   );
 
