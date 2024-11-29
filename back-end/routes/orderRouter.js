@@ -1,5 +1,5 @@
 import express from "express";
-import { createOrder, getAllOrder } from "../controllers/order.js";
+import { createOrder, getAllOrder } from "../controllers/order.controller.js";
 
 const orderRouter = express.Router();
 

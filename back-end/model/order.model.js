@@ -3,15 +3,18 @@ import mongoose from "mongoose";
 const processEnum = {
   values: ["Progress", "Delivered", "Waiting", "Active"],
 };
+const paymentTypeEnum = {
+  values: ["Cash", "Card"],
+};
 
 const orderSchema = new mongoose.Schema({
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
+  userId: {
+    type: mongoose.Schema.ObjectId,
     ref: "User",
     required: true,
   },
   orderNumber: {
-    type: Number,
+    type: String,
     required: true,
   },
   totalPrice: {
@@ -23,9 +26,9 @@ const orderSchema = new mongoose.Schema({
     enum: processEnum,
     default: "Progress",
   },
-  createdAt: {
+  createdDate: {
     type: Date,
-    deafault: () => Date.now(),
+    default: () => Date.now(),
     immutable: true,
   },
   district: {
@@ -40,8 +43,21 @@ const orderSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  createdDate: {
-    type: Date,
+  phoneNumber: {
+    type: String,
+    required: true,
+  },
+  paymentType: {
+    type: String,
+    enum: paymentTypeEnum,
+    default: "Card",
+  },
+  detail: {
+    type: String,
+  },
+  categoryId: {
+    type: mongoose.Schema.ObjectId,
+    ref: "Category",
     required: true,
   },
 });
