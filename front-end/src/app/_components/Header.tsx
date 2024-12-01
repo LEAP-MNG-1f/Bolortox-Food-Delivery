@@ -37,7 +37,7 @@ export default function Header() {
       onKeyDown={toggleDrawer(false)}
       className="!w-[586px] !flex !flex-col !items-center !justify-center"
     >
-      <div className="flex flex-col justify-between">
+      <div className="flex flex-col items-center gap-56">
         <div className="flex flex-col justify-center w-[538px]">
           <div className="flex w-[538px] h-[48px] items-center pt-7 justify-between pb-[48px]">
             <ArrowLeft />
