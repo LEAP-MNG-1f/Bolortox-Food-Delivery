@@ -9,7 +9,7 @@ import { Pinecone } from "./svg/Pinecone";
 import { Bucket } from "./svg/Bucket";
 import { Human } from "./svg/Human";
 import Link from "next/link";
-import RightSideDrawer from "./MenuPage/RightSideDrawer";
+
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import { ArrowLeft } from "./svg/arrowLeft";
