@@ -24,18 +24,18 @@ export const MainCourse = ({ foods }: { foods: FoodType[] }) => {
   return (
     <div className="w-full flex justify-center">
       <div className="w-[1200px] flex justify-center">
-      
-
-        <div >
+        <div>
           {foods.map((food) => {
-            return <FoodsCart key={food._id} 
-            price = {food.price}
-            image = {food.image}
-            name = {food.name}
-            ingredient = {food.ingredient}
-            _id = {food._id}
-            />
-            
+            return (
+              <FoodsCart
+                key={food._id}
+                price={food.price}
+                image={food.image}
+                name={food.name}
+                ingredient={food.ingredient}
+                _id={food._id}
+              />
+            );
           })}
         </div>
       </div>
