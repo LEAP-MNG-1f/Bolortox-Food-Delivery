@@ -25,6 +25,7 @@ export const FoodsCart = ({
   name,
   ingredient,
   _id,
+  categoryId,
 }: FoodType) => {
   const [open, setOpen] = React.useState(false);
 
