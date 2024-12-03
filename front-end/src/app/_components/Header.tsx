@@ -39,36 +39,24 @@ export default function Header({ foods }: { foods: FoodType[] }) {
       className="!w-[586px] !flex !flex-col !items-center !justify-center"
     >
       <div>
-      <div className="flex flex-col items-center gap-56">
-    <div className="flex flex-col justify-center w-[538px]">
-      <div className="flex w-[538px] h-[48px] items-center pt-7 justify-between pb-[48px]">
-        <ArrowLeft />
-        <button className="font-bold text-xl">Таны сагс</button>
-        <div> </div>
-      </div>
-        {foods.map((food) => {
-          return (
-            <RightDrawer
-              key={food._id}
-              price={food.price}
-              image={food.image}
-              name={food.name}
-              ingredient={food.ingredient}
-              _id={food._id}
-            />
-          );
-        })}
-         </div>
-    <div className="w-[586px] h-[172px] px-[32px] flex justify-between items-center border-t-2 border">
-      <div>
-        <p className="text-[#5E6166]">Нийт төлөх дүн</p>
-        <p className="font-bold text-lg">38,400₮</p>
-      </div>
-      <button className="w-[256px] h-[48px] bg-[#18BA51] text-white rounded-md">
-        Захиалах
-      </button>
-    </div>
-  </div>
+        <div className="flex flex-col items-center gap-56">
+          <div className="flex flex-col justify-center w-[538px]">
+            <div className="flex w-[538px] h-[48px] items-center pt-7 justify-between pb-[48px]">
+              <ArrowLeft />
+              <button className="font-bold text-xl">Таны сагс</button>
+              <div> </div>
+            </div>
+          </div>
+          <div className="w-[586px] h-[172px] px-[32px] flex justify-between items-center border-t-2 border">
+            <div>
+              <p className="text-[#5E6166]">Нийт төлөх дүн</p>
+              <p className="font-bold text-lg">38,400₮</p>
+            </div>
+            <button className="w-[256px] h-[48px] bg-[#18BA51] text-white rounded-md">
+              Захиалах
+            </button>
+          </div>
+        </div>
       </div>
     </Box>
   );
@@ -84,12 +72,12 @@ export default function Header({ foods }: { foods: FoodType[] }) {
           </IconButton>
           <Box className="flex gap-5 ">
             <Link href="/home-page">
-              <Typography>НҮҮР</Typography>
+              <p className="font-bold ">НҮҮР</p>
             </Link>
             <Link href="/menu-page">
-              <Typography>ХООЛНЫ ЦЭС</Typography>
+              <p className="font-bold ">ХООЛНЫ ЦЭС</p>
             </Link>
-            <Typography>ХҮРГЭЛТИЙН БҮС</Typography>
+            <p className="font-bold ">ХҮРГЭЛТИЙН БҮС</p>
           </Box>
         </div>
         <div>

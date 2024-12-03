@@ -13,15 +13,14 @@ export const Footer = () => (
   >
     <div className="absolute w-[1200px] h-[322px] flex flex-col items-center gap-[45px]">
       <div className="w-[200px] h-[41px] flex items-center gap-[12px]">
-        <Link href="./home-page">  <button className="flex justify-center items-center gap-2">
-              <div className="w-[41px] h-[41px] flex items-center">
-          <WhitePineIcon />
-        </div>
-        <p className="text-white font-bold text-xl ">Food delivery</p>
-        </button>
+        <Link href="./home-page">
+          <button className="flex justify-center items-center gap-2">
+            <div className="w-[41px] h-[41px] flex items-center">
+              <WhitePineIcon />
+            </div>
+            <p className="text-white font-bold text-xl ">Food delivery</p>
+          </button>
         </Link>
-      
-    
       </div>
 
       <div className="flex gap-[95px]">
@@ -32,15 +31,22 @@ export const Footer = () => (
         <button className="border-b-2 border-b-white text-white">
           Хоолны цэс
         </button>
-        <button className="border-b-2 border-b-white text-white">
-          Үйлчилгээний нөхцөл
-        </button>
-        <button className="border-b-2 border-b-white text-white">
-          Хүргэлтийн бүс
-        </button>
-        <button className="border-b-2 border-b-white text-white">
-          Нууцлалын бодлого
-        </button>
+        <Link href="./terms-page">
+          <button className="border-b-2 border-b-white text-white">
+            Үйлчилгээний нөхцөл
+          </button>
+        </Link>
+
+        <Link href="./map-page">
+          <button className="border-b-2 border-b-white text-white">
+            Хүргэлтийн бүс
+          </button>
+        </Link>
+        <Link href="./condition-page">
+          <button className="border-b-2 border-b-white text-white">
+            Нууцлалын бодлого
+          </button>
+        </Link>
       </div>
 
       <div className="flex items-center gap-[18px]">
