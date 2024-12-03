@@ -14,4 +14,11 @@ const createCategory = async (request, response) => {
   }
 };
 
-export { createCategory };
+const getAllCategories = async (request, response) => {
+  const result = await Category.find();
+  response.json({
+    success: true,
+    data: result,
+  });
+};
+export { createCategory, getAllCategories };
