@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <div>
       <HomePageBody />
-      <HomePageCategory />
+
       <HomePageInfo />
     </div>
   );
