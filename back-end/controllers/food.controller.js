@@ -3,12 +3,12 @@ import { Food } from "../model/food.model.js";
 const createFood = async (request, response) => {
   try {
     const result = await Food.create({
-      name: "Yogurt bowl",
+      name: "Pumpkin Soup",
       image:
-        "http://res.cloudinary.com/dkm8vqcln/image/upload/v1732477540/m3k0mfbz1xozkoacbhp8.png",
-      ingredient: "Oat, yogurt, berries , banana",
-      price: "9000",
-      categoryId: "674929948d7746ef987104cd",
+        "https://www.seriouseats.com/thmb/DvSDZoMw8WSOQFAMgf3L2wlfY9Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/053123_TomatoSoup-MPPSoupsAndStews-Morgan-Hunt-Glaze-f59a081d7efb4625a75a1a907a6b1cbf.jpg",
+      ingredient: "Pumpkin , garlic , pepper, parsley, salt",
+      price: "43000",
+      categoryId: "674fc08f71a90d15afa94762",
     });
     response.json({
       success: true,

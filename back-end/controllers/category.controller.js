@@ -3,7 +3,7 @@ import { Category } from "../model/category.model.js";
 const createCategory = async (request, response) => {
   try {
     const result = await Category.create({
-      name: "Dinner",
+      name: "Soup",
     });
     response.json({
       success: true,
