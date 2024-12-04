@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { HomePageBody } from "../HomePage/HomePageBody";
 import { HomePageInfo } from "../HomePage/HomePageInfo";
+import { groupBy } from "lodash";
 
 export default function HomePage() {
   const [foodData, setFoodData] = useState([]);
@@ -12,6 +13,7 @@ export default function HomePage() {
   useEffect(() => {
     getFoodData();
   }, []);
+
   return (
     <div>
       <HomePageBody />

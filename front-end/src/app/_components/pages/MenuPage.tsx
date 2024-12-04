@@ -1,7 +1,7 @@
 "use client";
 import { FoodType, MainCourse } from "../MenuPage/MainCourse";
 import { useEffect, useState } from "react";
-
+import { groupBy } from "lodash";
 export default function MenuPage() {
   const [foodData, setFoodData] = useState([]);
   const [category, setCategory] = useState([]);
@@ -20,6 +20,7 @@ export default function MenuPage() {
     getFoodData();
     getCategoryData();
   }, []);
+
   return (
     <div>
       <MainCourse categories={category} foods={foodData} />

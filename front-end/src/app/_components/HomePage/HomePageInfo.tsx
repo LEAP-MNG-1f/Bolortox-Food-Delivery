@@ -8,7 +8,6 @@ import { BookIcon } from "../svg/BookIcon";
 import { ClockIcon } from "../svg/ClockIcon";
 import { SaladIcon } from "../svg/SaladIcon";
 
-
 export const HomePageInfo = () => {
   const DemoPaper = styled(Paper)(({ theme }) => ({
     width: 120,
@@ -20,7 +19,7 @@ export const HomePageInfo = () => {
   return (
     <div className=" w-full h-[415px] flex justify-center pt-[122px]">
       <div className="w-[1200px] flex justify-center items-between">
-        <Stack direction="row" spacing={2}>
+        <Stack direction="row" spacing={9}>
           <DemoPaper
             sx={{
               width: 265,

@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { useEffect, useState } from "react";
+import { FoodContext } from "@/provider/FoodProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,31 +18,31 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [foodData, setFoodData] = useState([])
+  const [foodData, setFoodData] = useState([]);
 
   const getFoodData = async () => {
     const response = await fetch("http://localhost:8001/api/food");
     const data = await response.json();
-  setFoodData(data.data)
-  }
+    setFoodData(data.data);
+  };
   useEffect(() => {
-    getFoodData()
-  }, [])
+    getFoodData();
+  }, []);
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header foods={foodData}/>
+        <FoodContext.Provider>
+          <Header foods={foodData} />
           {children}
-        <Footer />
-      
+          <Footer />
+        </FoodContext.Provider>
       </body>
     </html>
   );
