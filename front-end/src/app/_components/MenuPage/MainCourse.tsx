@@ -7,7 +7,6 @@ type smallCategory = {
   _id: string;
 };
 
-// Define the Food and Category Types
 export type FoodType = {
   _id: string;
   name: string;
@@ -34,18 +33,12 @@ export const MainCourse: React.FC<MainCourseProps> = ({
   const [selectedCategory, setSelectedCategory] = React.useState<string>("All");
   const [filteredFoods, setFilteredFoods] = React.useState<FoodType[]>(foods);
 
-  console.log(foods);
-  console.log(categories);
-
-  // Handle category change (filtering the foods based on category)
   const handleCategoryChange = (category: CategoryType) => {
     setSelectedCategory(category.name);
 
-    // If 'All' is selected, show all foods
     if (category.name === "All") {
       setFilteredFoods(foods);
     } else {
-      // Filter foods based on the selected category
       setFilteredFoods(
         foods.filter((food) => food.categoryId._id === category._id)
       );
@@ -55,9 +48,10 @@ export const MainCourse: React.FC<MainCourseProps> = ({
   return (
     <div className="w-full flex justify-center">
       <div className="w-[1200px] flex flex-col justify-center">
-        {/* Category Buttons */}
         <div className="flex gap-4 mb-4">
           <Button
+            className="w-[283px] h-[43px] "
+            color="success"
             key="all"
             onClick={() =>
               handleCategoryChange({ _id: "all", name: "All" } as CategoryType)
@@ -68,6 +62,8 @@ export const MainCourse: React.FC<MainCourseProps> = ({
           </Button>
           {categories?.map((category) => (
             <Button
+              className="w-[283px] h-[43px] "
+              color="success"
               key={category._id}
               onClick={() => handleCategoryChange(category)}
               variant={
@@ -79,8 +75,7 @@ export const MainCourse: React.FC<MainCourseProps> = ({
           ))}
         </div>
 
-        {/* Foods List */}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-4 gap-4">
           {filteredFoods.map((food) => (
             <FoodsCart
               key={food._id}

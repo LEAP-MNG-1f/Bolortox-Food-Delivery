@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { HomePageBody } from "../HomePage/HomePageBody";
 import { HomePageInfo } from "../HomePage/HomePageInfo";
-import { FoodType, MainCourse } from "../MenuPage/MainCourse";
+import HomePageCategory from "../HomePage/HomePageCategory";
 
 export default function HomePage() {
   const [foodData, setFoodData] = useState([]);
@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <div>
       <HomePageBody />
-      <MainCourse foods={foodData} />
+      <HomePageCategory />
       <HomePageInfo />
     </div>
   );
