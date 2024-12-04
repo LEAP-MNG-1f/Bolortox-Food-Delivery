@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { HomePageBody } from "../HomePage/HomePageBody";
 import { HomePageInfo } from "../HomePage/HomePageInfo";
-import HomePageCategory from "../HomePage/HomePageCategory";
 
 export default function HomePage() {
   const [foodData, setFoodData] = useState([]);

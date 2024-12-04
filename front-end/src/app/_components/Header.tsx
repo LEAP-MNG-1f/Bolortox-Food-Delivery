@@ -77,7 +77,9 @@ export default function Header({ foods }: { foods: FoodType[] }) {
             <Link href="/menu-page">
               <p className="font-bold ">ХООЛНЫ ЦЭС</p>
             </Link>
-            <p className="font-bold ">ХҮРГЭЛТИЙН БҮС</p>
+            <Link href="/map-page">
+              <p className="font-bold ">ХҮРГЭЛТИЙН БҮС</p>
+            </Link>
           </Box>
         </div>
         <div>
