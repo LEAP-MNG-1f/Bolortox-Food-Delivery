@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./_components/Header";
 import { Footer } from "./_components/Footer";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FoodContext } from "@/provider/FoodProvider";
 
 const geistSans = localFont({
@@ -33,16 +33,15 @@ export default function RootLayout({
   useEffect(() => {
     getFoodData();
   }, []);
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <FoodContext.Provider>
-          <Header foods={foodData} />
-          {children}
-          <Footer />
-        </FoodContext.Provider>
+        <Header foods={foodData} />
+        {children}
+        <Footer />
       </body>
     </html>
   );

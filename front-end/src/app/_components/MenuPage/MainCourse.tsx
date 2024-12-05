@@ -2,6 +2,7 @@
 import * as React from "react";
 import { FoodsCart } from "./FoodsCart";
 import { Button } from "@mui/material";
+import { FoodContext } from "@/provider/FoodProvider";
 
 type smallCategory = {
   _id: string;
@@ -44,7 +45,8 @@ export const MainCourse: React.FC<MainCourseProps> = ({
       );
     }
   };
-
+  const value = React.useContext(FoodContext);
+  console.log(value);
   return (
     <div className="w-full flex justify-center">
       <div className="w-[1200px] flex flex-col justify-center">
