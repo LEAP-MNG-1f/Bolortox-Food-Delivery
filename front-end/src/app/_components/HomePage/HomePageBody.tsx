@@ -18,8 +18,17 @@ export const HomePageBody = () => {
             Horem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
-        <div className="w-[588px] h-[438px]">
-          <img src="./FoodImage.png" alt="" />
+        <div className="relative w-[588px] h-[438px]">
+          <img
+            src="./HomePic.png"
+            alt=""
+            className=" w-[443px] h-[443px] absolute"
+          />
+          <img
+            src="./HomePic1.png"
+            alt=""
+            className="w-[313px] h-[313px] absolute top-[110px] left-[280px]"
+          />
         </div>
       </div>
     </div>
