@@ -39,9 +39,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header foods={foodData} />
-        {children}
-        <Footer />
+        <FoodContext.Provider value={foodData}>
+          <Header foods={foodData} />
+          {children}
+          <Footer />
+        </FoodContext.Provider>
       </body>
     </html>
   );

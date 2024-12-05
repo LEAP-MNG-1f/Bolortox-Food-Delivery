@@ -9,6 +9,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { FoodType } from "./MainCourse";
 import { Minus } from "../svg/Minus";
 import { Plus } from "../svg/Plus";
+import { FoodContext } from "@/provider/FoodProvider";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -72,7 +73,7 @@ export const FoodsCart = ({
             <div className="flex flex-col gap-3">
               <p className="font-bold text-lg">Орц</p>
               <div className="w-[352px] h-[54px] flex justify-center items-center p-2 bg-[#F6F6F6] text-[#767676]">
-                Хулуу, төмс, лууван , сонгино, цөцгийн тос, самрын үр
+                {ingredient}
               </div>
             </div>
             <p className="font-bold text-lg">Тоо</p>
