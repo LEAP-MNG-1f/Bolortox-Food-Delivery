@@ -30,6 +30,8 @@ export const FoodsCart = ({
 }: FoodType) => {
   const [open, setOpen] = React.useState(false);
 
+  // Cart = [{id: "1", quantity: 2}, {id: "2" , quantity : 1}]
+
   React.useEffect(() => {
     setOpen(false);
   }, []);
@@ -40,6 +42,10 @@ export const FoodsCart = ({
   const handleClose = () => {
     localStorage.setItem("foods", JSON.stringify({ _id }));
     setOpen(false);
+  };
+
+  const addFoodToCart = () => {
+    localStorage.setItem("cartfoods", "1");
   };
 
   return (
@@ -105,7 +111,7 @@ export const FoodsCart = ({
               <Button
                 className="!w-[384px] !h-[48px] !bg-[#18BA51] !text-white"
                 autoFocus
-                onClick={handleClose}
+                onClick={addFoodToCart}
               >
                 Сагслах
               </Button>
